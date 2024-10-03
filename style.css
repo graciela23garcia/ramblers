@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #39b6fd;
+}
+
+.image-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: rotate 8s linear infinite, fade 8s linear infinite; /* Making the fade slower */
+}
+
+/* Add this keyframes definition for fade effect */
+@keyframes fade {
+    0%, 100% {
+        opacity: 1; /* Fully visible at start and end */
+    }
+    50% {
+        opacity: 0; /* Fully transparent halfway */
+    }
+
+}
+
+body, html {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.title {
+    color: #F8B405; /* Adjust the text color as needed */
+    font-size: 3rem; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Space between title and image */
+    position: fixed; /* Keep the title fixed at the top */
+    top: 20px; /* Adjust the top position as needed */
+    width: 100%; /* Make the title full-width */
+    text-align: center; /* Center the title text */
+    animation: fade-title 5s linear infinite; /* Fading effect */
+    font-family: 'Merriweather', serif; /* Use Merriweather font */
+}
+
+@keyframes fade-title {
+    0%, 100% {
+        opacity: 1; /* Fully visible at start and end */
+    }
+    50% {
+        opacity: 0; /* Fully transparent halfway */
+    }
+}
+@keyframes fade-title {
+    0%, 100% {
+        opacity: 1; /* Fully visible at start and end */
+    }
+    50% {
+        opacity: 0; /* Fully transparent halfway */
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Scale up */
+    }
+}
+
+.title {
+    animation: pulse 2s infinite; /* Infinite loop */
+}
+
